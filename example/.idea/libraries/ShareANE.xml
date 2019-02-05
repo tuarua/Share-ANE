@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="ShareANE" type="flex">
+    <CLASSES>
+      <root url="jar://$DOCUMENTS$/Share-ANE/native_extension/ane/ShareANE.ane!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="https://tuarua.github.io/asdocs/shareane/index.html" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>
