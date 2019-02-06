@@ -4,8 +4,7 @@
 # Build and Release Folders
 bin-debug/
 bin-release/
-ane/debug
-ane/resign.sh
+/docs/
 
 # Other files and folders
 .settings/
@@ -14,12 +13,12 @@ ane/resign.sh
 .externalToolBuilders
 .model
 
+*.ane
 
 
+# Created by https://www.gitignore.io/api/intellij
 
-# Created by https://www.gitignore.io/api/appcode
-
-### AppCode ###
+### Intellij ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
@@ -63,7 +62,7 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
-### AppCode Patch ###
+### Intellij Patch ###
 # Comment Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-215987721
 
 # *.iml

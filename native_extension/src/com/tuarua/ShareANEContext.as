@@ -2,6 +2,7 @@ package com.tuarua {
 import flash.events.StatusEvent;
 import flash.external.ExtensionContext;
 
+/** @private */
 public class ShareANEContext {
     internal static const NAME:String = "ShareANE";
     internal static const TRACE:String = "TRACE";
