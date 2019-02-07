@@ -14,7 +14,7 @@
  */
 
 #import "FreMacros.h"
-#import "ShareANE_LIB.h"
+#import "ShareANE_oc.h"
 #import <ShareANE_FW/ShareANE_FW.h>
 
 #define FRE_OBJC_BRIDGE TRSHA_FlashRuntimeExtensionsBridge // use unique prefix throughout to prevent clashes with other ANEs

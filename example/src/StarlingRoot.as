@@ -8,6 +8,7 @@ import flash.events.Event;
 import flash.filesystem.File;
 import flash.filesystem.FileMode;
 import flash.filesystem.FileStream;
+import flash.utils.ByteArray;
 
 import starling.display.Sprite;
 import starling.events.Touch;
@@ -56,22 +57,16 @@ public class StarlingRoot extends Sprite {
     }
 
     private static function getFileToShare():File {
-        var ret:File = File.applicationStorageDirectory.resolvePath("dog.jpg");
-        if (!ret.exists) {
-            var inFile:File = File.applicationDirectory.resolvePath("dog.jpg");
-            var inStream:FileStream = new FileStream();
-            inStream.open(inFile, FileMode.READ);
-            var fileContents1:String = inStream.readUTFBytes(inStream.bytesAvailable);
-            inStream.close();
-
-            var outFile:File = File.applicationStorageDirectory.resolvePath("dog.jpg");
-            var outStream:FileStream = new FileStream();
-            outStream.open(outFile, FileMode.WRITE);
-            outStream.writeUTFBytes(fileContents1);
-            outStream.close();
-            return outFile;
+        var sourceFile:File = File.applicationDirectory.resolvePath("dog.jpg");
+        var destFile:File = File.applicationStorageDirectory.resolvePath("dog.jpg");
+        if (sourceFile.nativePath.length == 0) { // Android - copy file to applicationStorageDirectory
+            if (!destFile.exists) {
+                sourceFile.copyTo(destFile, true);
+            }
+            return destFile;
+        } else {
+            return sourceFile;
         }
-        return ret;
     }
 
     private function onDeleteTouch(event:TouchEvent):void {

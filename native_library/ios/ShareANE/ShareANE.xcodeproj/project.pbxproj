@@ -11,10 +11,10 @@
 		CE0560401FB25CE200D06976 /* FreSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE05603E1FB25CE200D06976 /* FreSwift.framework */; };
 		CE0560431FB25D1B00D06976 /* SwiftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0560411FB25D1B00D06976 /* SwiftController.swift */; };
 		CE0560451FB25DD000D06976 /* ShareANE_FW.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE87F4831FB259FA005CF7DF /* ShareANE_FW.framework */; };
-		CE05604A1FB25DF600D06976 /* ShareANE_LIB.h in Headers */ = {isa = PBXBuildFile; fileRef = CE87F4771FB259DB005CF7DF /* ShareANE_LIB.h */; };
+		CE05604A1FB25DF600D06976 /* ShareANE_oc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE87F4771FB259DB005CF7DF /* ShareANE_oc.h */; };
 		CE05604E1FB25E8E00D06976 /* FreMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CE05604D1FB25E8E00D06976 /* FreMacros.h */; };
 		CE05604F1FB25E9F00D06976 /* FreMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CE05604D1FB25E8E00D06976 /* FreMacros.h */; };
-		CE87F4791FB259DB005CF7DF /* ShareANE_LIB.m in Sources */ = {isa = PBXBuildFile; fileRef = CE87F4781FB259DB005CF7DF /* ShareANE_LIB.m */; };
+		CE87F4791FB259DB005CF7DF /* ShareANE.m in Sources */ = {isa = PBXBuildFile; fileRef = CE87F4781FB259DB005CF7DF /* ShareANE.m */; };
 		CE87F4871FB259FA005CF7DF /* ShareANE_FW.h in Headers */ = {isa = PBXBuildFile; fileRef = CE87F4851FB259FA005CF7DF /* ShareANE_FW.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CEC5AEFE202F536F00519265 /* SwiftController+FreSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5AEFD202F536F00519265 /* SwiftController+FreSwift.swift */; };
 		CEC5AF02202F586500519265 /* SwiftController+UIPopoverPresentationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5AF01202F586500519265 /* SwiftController+UIPopoverPresentationControllerDelegate.swift */; };
@@ -33,10 +33,10 @@
 /* Begin PBXFileReference section */
 		CE05603E1FB25CE200D06976 /* FreSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FreSwift.framework; path = Carthage/Build/iOS/FreSwift.framework; sourceTree = "<group>"; };
 		CE0560411FB25D1B00D06976 /* SwiftController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftController.swift; sourceTree = "<group>"; };
-		CE05604D1FB25E8E00D06976 /* FreMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FreMacros.h; path = ShareANE/FreMacros.h; sourceTree = SOURCE_ROOT; };
+		CE05604D1FB25E8E00D06976 /* FreMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FreMacros.h; path = ShareANE/Headers/FreMacros.h; sourceTree = SOURCE_ROOT; };
 		CE87F4751FB259DB005CF7DF /* libShareANE_LIB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libShareANE_LIB.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE87F4771FB259DB005CF7DF /* ShareANE_LIB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ShareANE_LIB.h; path = ShareANE/ShareANE_LIB.h; sourceTree = SOURCE_ROOT; };
-		CE87F4781FB259DB005CF7DF /* ShareANE_LIB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ShareANE_LIB.m; path = ShareANE/ShareANE_LIB.m; sourceTree = SOURCE_ROOT; };
+		CE87F4771FB259DB005CF7DF /* ShareANE_oc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ShareANE_oc.h; path = ShareANE/Headers/ShareANE_oc.h; sourceTree = SOURCE_ROOT; };
+		CE87F4781FB259DB005CF7DF /* ShareANE.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ShareANE.m; path = ShareANE/ShareANE.m; sourceTree = SOURCE_ROOT; };
 		CE87F4831FB259FA005CF7DF /* ShareANE_FW.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ShareANE_FW.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE87F4851FB259FA005CF7DF /* ShareANE_FW.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareANE_FW.h; sourceTree = "<group>"; };
 		CE87F4861FB259FA005CF7DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,6 +66,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90638465220CBB5900ED65C8 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				CE05604D1FB25E8E00D06976 /* FreMacros.h */,
+				CE87F4771FB259DB005CF7DF /* ShareANE_oc.h */,
+				CE87F4851FB259FA005CF7DF /* ShareANE_FW.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
 		CE05603D1FB25CD100D06976 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,10 +106,8 @@
 		CE87F4841FB259FA005CF7DF /* ShareANE */ = {
 			isa = PBXGroup;
 			children = (
-				CE05604D1FB25E8E00D06976 /* FreMacros.h */,
-				CE87F4771FB259DB005CF7DF /* ShareANE_LIB.h */,
-				CE87F4781FB259DB005CF7DF /* ShareANE_LIB.m */,
-				CE87F4851FB259FA005CF7DF /* ShareANE_FW.h */,
+				90638465220CBB5900ED65C8 /* Headers */,
+				CE87F4781FB259DB005CF7DF /* ShareANE.m */,
 				CE87F4861FB259FA005CF7DF /* Info.plist */,
 				CE0560411FB25D1B00D06976 /* SwiftController.swift */,
 				CEC5AEFD202F536F00519265 /* SwiftController+FreSwift.swift */,
@@ -115,7 +123,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE05604A1FB25DF600D06976 /* ShareANE_LIB.h in Headers */,
+				CE05604A1FB25DF600D06976 /* ShareANE_oc.h in Headers */,
 				CE05604E1FB25E8E00D06976 /* FreMacros.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,7 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE87F4791FB259DB005CF7DF /* ShareANE_LIB.m in Sources */,
+				CE87F4791FB259DB005CF7DF /* ShareANE.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

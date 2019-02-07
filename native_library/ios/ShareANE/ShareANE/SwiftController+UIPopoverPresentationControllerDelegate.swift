@@ -17,6 +17,6 @@ import Foundation
 extension SwiftController: UIPopoverPresentationControllerDelegate {
     public func popoverPresentationControllerDidDismissPopover(
         _ popoverPresentationController: UIPopoverPresentationController) {
-        trace("didDismiss")
+        
     }
 }

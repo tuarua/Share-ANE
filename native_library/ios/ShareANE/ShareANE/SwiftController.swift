@@ -16,9 +16,6 @@
 import Foundation
 import FreSwift
 
-// https://github.com/d-silveira/flutter-share
-// https://github.com/flutter/plugins/pull/970/files
-
 public class SwiftController: NSObject {
     public static var TAG = "ShareANE"
     public var context: FreContextSwift!
@@ -45,7 +42,13 @@ public class SwiftController: NSObject {
             else {
                 return FreArgError(message: "shareFile").getError(#file, #line, #column)
         }
-         var items: [Any] = []
+        var items: [Any] = []
+        if let subject = String(argv[2]) {
+            items.append(subject)
+        }
+        if let text = String(argv[3]) {
+           items.append(text)
+        }
         if let mimeType = String(argv[1]) {
             if mimeType.hasPrefix("image/") {
                 let image = UIImage(contentsOfFile: path)
@@ -54,12 +57,6 @@ public class SwiftController: NSObject {
                 let url = URL.init(fileURLWithPath: path)
                 items.append(url)
             }
-        }
-        if let subject = String(argv[2]) {
-            items.append(subject)
-        }
-        if let text = String(argv[3]) {
-            items.append(text)
         }
         show(items: items)
         return nil
