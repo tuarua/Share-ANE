@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<application xmlns="http://ns.adobe.com/air/application/32.0">
+    <id>com.tuarua.ShareANE.Example</id>
+    <filename>Main</filename>
+    <name>ShareANEExample</name>
+    <versionNumber>1.0.0</versionNumber>
+    <extensions>
+        <extensionID>com.tuarua.frekotlin</extensionID>
+        <extensionID>com.tuarua.ShareANE</extensionID>
+        <extensionID>com.android.support.support-v4</extensionID>
+    </extensions>
+    <initialWindow>
+        <content>SWF file name is set automatically at compile time</content>
+        <visible>true</visible>
+        <aspectRatio>portrait</aspectRatio>
+        <autoOrients>false</autoOrients>
+        <fullScreen>true</fullScreen>
+        <renderMode>direct</renderMode>
+        <depthAndStencil>true</depthAndStencil>
+    </initialWindow>
+    
+    <icon>
+        <image76x76>icon76.png</image76x76>
+        <image120x120>icon120.png</image120x120>
+        <image152x152>icon152.png</image152x152>
+        <image167x167>icon167.png</image167x167>
+        <image180x180>icon180.png</image180x180>
+    </icon>
+
+    <!-- Specify Android specific tags that get passed to AndroidManifest.xml file. -->
+    <android>
+        <manifestAdditions>
+            <![CDATA[
+            <manifest android:installLocation="auto">
+            <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="27" />
+                <uses-permission android:name="android.permission.INTERNET"/>
+                <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+			    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+                <application android:enabled="true">
+                    <provider
+                        android:name="android.support.v4.content.FileProvider"
+                        android:authorities="air.com.tuarua.ShareANE.Example.share_provider"
+                        android:exported="false"
+                        android:grantUriPermissions="true">
+                        <meta-data
+                            android:name="android.support.FILE_PROVIDER_PATHS"
+                            android:resource="@xml/air_share_file_paths" />
+                    </provider>
+                </application>
+            </manifest>
+            ]]>
+        </manifestAdditions>
+
+    </android>
+
+    
+    
+</application>
