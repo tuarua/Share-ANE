@@ -14,7 +14,7 @@ wget https://github.com/tuarua/Swift-IOS-ANE/releases/download/$FreSwiftVersion/
 unzip -u -o AIRSDK_patch.zip
 rm AIRSDK_patch.zip
 
-wget https://github.com/tuarua/Sharea-ANE/releases/download/$AneVersion/ios_dependencies.zip
+wget https://github.com/tuarua/Share-ANE/releases/download/$AneVersion/ios_dependencies.zip
 unzip -u -o ios_dependencies.zip
 rm ios_dependencies.zip
 
