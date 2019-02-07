@@ -8,8 +8,8 @@ echo build asdocs
 call D:\dev\sdks\AIR\AIRSDK_28\bin\asdoc ^
 -doc-sources %pathtome%..\src ^
 -source-path %pathtome%..\src ^
--window-title "Tua Rua DeviceInfo-ANE by Tua Rua Ltd." ^
--main-title "DeviceInfo-ANE Documentation" ^
+-window-title "Tua Rua Share-ANE by Tua Rua Ltd." ^
+-main-title "Share-ANE Documentation" ^
 -footer "Copyright Tua Rua Ltd. 2019" ^
 -output %pathtome%..\docs\asdocs ^
 -lenient ^
@@ -19,8 +19,8 @@ call D:\dev\sdks\AIR\AIRSDK_28\bin\asdoc ^
 call D:\dev\sdks\AIR\AIRSDK_28\bin\asdoc ^
 -doc-sources %pathtome%..\src ^
 -source-path %pathtome%..\src ^
--window-title "DeviceInfo-ANE by Tua Rua Ltd." ^
--main-title "DeviceInfo-ANE Documentation" ^
+-window-title "Share-ANE by Tua Rua Ltd." ^
+-main-title "Share-ANE Documentation" ^
 -footer "Copyright Tua Rua Ltd. 2019" ^
 -output %pathtome%..\docs\tmp ^
 -lenient -keep-xml=true -skip-xsl=true ^
