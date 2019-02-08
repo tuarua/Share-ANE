@@ -1,6 +1,6 @@
 # Share-ANE
 
-Share Adobe Air Native Extension for iOS 9.0+ and Android 19+.    
+Share text or files with this Adobe Air Native Extension for iOS 9.0+ and Android 19+.    
 
 -------------
 
