@@ -6,9 +6,6 @@ import com.tuarua.fre.ANEError;
 import flash.desktop.NativeApplication;
 import flash.events.Event;
 import flash.filesystem.File;
-import flash.filesystem.FileMode;
-import flash.filesystem.FileStream;
-import flash.utils.ByteArray;
 
 import starling.display.Sprite;
 import starling.events.Touch;
@@ -38,8 +35,8 @@ public class StarlingRoot extends Sprite {
     private function initMenu():void {
         shareTextBtn.y = 100;
         shareFileBtn.y = 180;
-        shareTextBtn.addEventListener(TouchEvent.TOUCH, onIndexTouch);
-        shareFileBtn.addEventListener(TouchEvent.TOUCH, onDeleteTouch);
+        shareTextBtn.addEventListener(TouchEvent.TOUCH, onShareTextTouch);
+        shareFileBtn.addEventListener(TouchEvent.TOUCH, onShareFileTouch);
 
         shareFileBtn.x = shareTextBtn.x = (stage.stageWidth - 200) / 2;
 
@@ -48,11 +45,11 @@ public class StarlingRoot extends Sprite {
 
     }
 
-    private function onIndexTouch(event:TouchEvent):void {
+    private function onShareTextTouch(event:TouchEvent):void {
         event.stopPropagation();
         var touch:Touch = event.getTouch(shareTextBtn, TouchPhase.ENDED);
         if (touch && touch.phase == TouchPhase.ENDED) {
-            share.text("http://www.google.com")
+            share.text("http://www.google.com");
         }
     }
 
@@ -69,7 +66,7 @@ public class StarlingRoot extends Sprite {
         }
     }
 
-    private function onDeleteTouch(event:TouchEvent):void {
+    private function onShareFileTouch(event:TouchEvent):void {
         event.stopPropagation();
         var touch:Touch = event.getTouch(shareFileBtn, TouchPhase.ENDED);
         if (touch && touch.phase == TouchPhase.ENDED) {
