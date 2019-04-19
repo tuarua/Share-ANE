@@ -17,7 +17,6 @@
 		CE87F4791FB259DB005CF7DF /* ShareANE.m in Sources */ = {isa = PBXBuildFile; fileRef = CE87F4781FB259DB005CF7DF /* ShareANE.m */; };
 		CE87F4871FB259FA005CF7DF /* ShareANE_FW.h in Headers */ = {isa = PBXBuildFile; fileRef = CE87F4851FB259FA005CF7DF /* ShareANE_FW.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CEC5AEFE202F536F00519265 /* SwiftController+FreSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5AEFD202F536F00519265 /* SwiftController+FreSwift.swift */; };
-		CEC5AF02202F586500519265 /* SwiftController+UIPopoverPresentationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC5AF01202F586500519265 /* SwiftController+UIPopoverPresentationControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +41,6 @@
 		CE87F4861FB259FA005CF7DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEC5AEFD202F536F00519265 /* SwiftController+FreSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftController+FreSwift.swift"; sourceTree = "<group>"; };
 		CEC5AEFF202F547E00519265 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
-		CEC5AF01202F586500519265 /* SwiftController+UIPopoverPresentationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftController+UIPopoverPresentationControllerDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +109,6 @@
 				CE87F4861FB259FA005CF7DF /* Info.plist */,
 				CE0560411FB25D1B00D06976 /* SwiftController.swift */,
 				CEC5AEFD202F536F00519265 /* SwiftController+FreSwift.swift */,
-				CEC5AF01202F586500519265 /* SwiftController+UIPopoverPresentationControllerDelegate.swift */,
 			);
 			path = ShareANE;
 			sourceTree = "<group>";
@@ -259,7 +256,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE0560431FB25D1B00D06976 /* SwiftController.swift in Sources */,
-				CEC5AF02202F586500519265 /* SwiftController+UIPopoverPresentationControllerDelegate.swift in Sources */,
 				CEC5AEFE202F536F00519265 /* SwiftController+FreSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

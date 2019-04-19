@@ -1,4 +1,4 @@
-$AneVersion = "1.0.0"
+$AneVersion = "1.1.0"
 $SupportV4Version = "27.1.0"
 
 $currentDir = (Get-Item -Path ".\" -Verbose).FullName

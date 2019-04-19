@@ -1,6 +1,6 @@
 #!/bin/sh
 
-AneVersion="1.0.0"
+AneVersion="1.1.0"
 SupportV4Version="27.1.0"
 
 wget -O android_dependencies/com.tuarua.frekotlin.ane https://github.com/tuarua/Android-ANE-Dependencies/blob/master/anes/kotlin/com.tuarua.frekotlin.ane?raw=true
