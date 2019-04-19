@@ -54,7 +54,7 @@ public class SwiftController: NSObject {
                 let image = UIImage(contentsOfFile: path)
                 items.append(image as Any)
             } else {
-                let url = URL.init(fileURLWithPath: path)
+                let url = URL(fileURLWithPath: path)
                 items.append(url)
             }
         }

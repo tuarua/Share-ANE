@@ -27,8 +27,6 @@ import android.support.v4.content.FileProvider
 @Suppress("unused", "UNUSED_PARAMETER", "UNCHECKED_CAST")
 class KotlinController : FreKotlinMainController {
 
-    private var asListeners: MutableList<String> = mutableListOf()
-
     fun init(ctx: FREContext, argv: FREArgv): FREObject? {
         return true.toFREObject()
     }
