@@ -3,7 +3,7 @@
     <id>com.tuarua.ShareANE.Example</id>
     <filename>Main</filename>
     <name>ShareANEExample</name>
-    <versionNumber>1.1.0</versionNumber>
+    <versionNumber>1.2.0</versionNumber>
     <extensions>
         <extensionID>com.tuarua.ShareANE</extensionID>
     </extensions>
