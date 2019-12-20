@@ -24,7 +24,7 @@
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/system" path-in-package="." />
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/src/dog.jpg" path-in-package="dog.jpg" />
           </files-to-package>
-          <AirSigningOptions keystore-path="$USER_HOME$/Documents/appleCertsProv/2019/dev/tua_rua_dev_2019.p12" provisioning-profile-path="$USER_HOME$/Documents/appleCertsProv/2019/dev/Tua_Rua_Dev_Provisioning.mobileprovision" />
+          <AirSigningOptions keystore-path="$USER_HOME$/Documents/appleCertsProv/2020/dev/tua_rua_dev_2020.p12" provisioning-profile-path="$USER_HOME$/Documents/appleCertsProv/2020/dev/Tua_Rua_Dev_Provisioning.mobileprovision" />
         </packaging-ios>
       </configuration>
       <configuration name="iOS-Simulator" target-platform="Mobile" pure-as="true" main-class="Main" output-file="iOS-Simulator.swf" output-folder="$MODULE_DIR$/bin-release/simulator">
@@ -49,7 +49,7 @@
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/system" path-in-package="." />
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/src/dog.jpg" path-in-package="dog.jpg" />
           </files-to-package>
-          <AirSigningOptions sdk="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk" keystore-path="$USER_HOME$/Documents/appleCertsProv/2019/dev/tua_rua_dev_2019.p12" provisioning-profile-path="$USER_HOME$/Documents/appleCertsProv/2019/dev/Tua_Rua_Dev_Provisioning.mobileprovision" />
+          <AirSigningOptions keystore-path="$USER_HOME$/Documents/appleCertsProv/2020/dev/tua_rua_dev_2020.p12" provisioning-profile-path="$USER_HOME$/Documents/appleCertsProv/2020/dev/Tua_Rua_Dev_Provisioning.mobileprovision" />
         </packaging-ios>
       </configuration>
       <configuration name="Android-Device" target-platform="Mobile" pure-as="true" main-class="Main" output-file="Android-Device.swf" output-folder="$MODULE_DIR$/bin-release/device">
@@ -61,10 +61,10 @@
             <entry library-name="starling" library-level="project">
               <dependency linkage="Merged" />
             </entry>
-            <entry library-name="com.android.support.support-v4-27.1.0" library-level="project">
+            <entry library-name="androidx.legacy.legacy-support-v4-1.0.0" library-level="project">
               <dependency linkage="Merged" />
             </entry>
-            <entry library-name="com.tuarua.frekotlin-1.8.0" library-level="project">
+            <entry library-name="com.tuarua.frekotlin-1.9.1" library-level="project">
               <dependency linkage="Merged" />
             </entry>
           </entries>
@@ -105,5 +105,7 @@
     <orderEntry type="library" exported="" name="com.android.support.support-v4-27.1.0" level="project" />
     <orderEntry type="library" exported="" name="com.tuarua.frekotlin" level="project" />
     <orderEntry type="library" exported="" name="com.tuarua.frekotlin-1.8.0" level="project" />
+    <orderEntry type="library" exported="" name="androidx.legacy.legacy-support-v4-1.0.0" level="project" />
+    <orderEntry type="library" exported="" name="com.tuarua.frekotlin-1.9.1" level="project" />
   </component>
 </module>

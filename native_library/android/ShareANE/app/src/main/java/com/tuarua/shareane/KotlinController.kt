@@ -22,7 +22,7 @@ import com.adobe.fre.FREObject
 import com.tuarua.frekotlin.*
 import java.io.File
 import java.io.IOException
-import android.support.v4.content.FileProvider
+import androidx.core.content.FileProvider
 
 @Suppress("unused", "UNUSED_PARAMETER", "UNCHECKED_CAST")
 class KotlinController : FreKotlinMainController {

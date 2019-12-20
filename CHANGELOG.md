@@ -1,5 +1,6 @@
 ### 1.3.0
 - AND: Updated to FreKotlin 1.9.1
+- AND: Updated to jetpack/androidx
 - iOS: Updated to FreSwift 4.1.0
 
 ### 1.2.0
