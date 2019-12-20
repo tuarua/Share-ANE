@@ -21,7 +21,7 @@ PS get_android_dependencies.ps1
 ```xml
 <extensions>
 <extensionID>com.tuarua.frekotlin</extensionID>
-<extensionID>com.android.support.support-v4</extensionID>
+<extensionID>androidx.legacy.legacy-support-v4</extensionID>
 <extensionID>com.tuarua.ShareANE</extensionID>
 ...
 </extensions>
@@ -31,7 +31,7 @@ You will also need to include the following in your app manifest. Update accordi
 
 ```xml
 <provider
-    android:name="android.support.v4.content.FileProvider"
+    android:name="androidx.core.content.FileProvider"
     android:authorities="air.[your.app.id].share_provider"
     android:exported="false"
     android:grantUriPermissions="true">
