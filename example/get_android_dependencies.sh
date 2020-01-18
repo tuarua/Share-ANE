@@ -1,7 +1,7 @@
 #!/bin/sh
 
 AneVersion="1.3.0"
-FreKotlinVersion="1.9.1"
+FreKotlinVersion="1.9.5"
 SupportV4Version="1.0.0"
 
 wget -O android_dependencies/com.tuarua.frekotlin-$FreKotlinVersion.ane https://github.com/tuarua/Android-ANE-Dependencies/blob/master/anes/kotlin/com.tuarua.frekotlin-$FreKotlinVersion.ane?raw=true

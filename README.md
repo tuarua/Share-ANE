@@ -15,7 +15,7 @@ bash get_android_dependencies.sh
 ```
 - Windows Powershell
 ```shell
-PS get_android_dependencies.ps1
+get_android_dependencies.ps1
 ```
 
 ```xml
@@ -70,6 +70,6 @@ You will need:
 - IntelliJ IDEA / Flash Builder
 - AIR 32 or greater
 - Android Studio 3 if you wish to edit the Android source
-- Xcode 10.1
-- wget on macOS
+- Xcode 11.3
+- [wget](http://rudix.org/packages/wget.html) on macOS
 - Powershell on Windows
