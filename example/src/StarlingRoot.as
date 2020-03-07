@@ -1,6 +1,6 @@
 package {
 
-import com.tuarua.ShareANE;
+import com.tuarua.Share;
 import com.tuarua.fre.ANEError;
 
 import flash.desktop.NativeApplication;
@@ -19,7 +19,7 @@ public class StarlingRoot extends Sprite {
     private var shareTextBtn:SimpleButton = new SimpleButton("Share Text");
     private var shareFileBtn:SimpleButton = new SimpleButton("Share File");
 
-    private var share:ShareANE;
+    private var share:Share;
 
     public function StarlingRoot() {
         super();
@@ -29,7 +29,7 @@ public class StarlingRoot extends Sprite {
 
     public function start():void {
         initMenu();
-        share = ShareANE.share;
+        share = Share.shared();
     }
 
     private function initMenu():void {
@@ -82,7 +82,7 @@ public class StarlingRoot extends Sprite {
     }
 
     private function onExiting(event:Event):void {
-        ShareANE.dispose();
+        Share.dispose();
     }
 
 }

@@ -17,44 +17,39 @@
 package com.tuarua {
 import com.tuarua.fre.ANEError;
 
-import flash.events.EventDispatcher;
 import flash.filesystem.File;
 
-public class ShareANE extends EventDispatcher {
-    private var _isInited:Boolean;
-    private static var _share:ShareANE;
+public class Share {
+    private static var _shared:Share;
 
-    public function ShareANE() {
-        if (_share) {
-            throw new Error(ShareANEContext.NAME + " is a singleton, use .share");
+    public function Share() {
+        if (_shared) {
+            throw new Error(ShareANEContext.NAME + " is a singleton, use .shared()");
         }
         if (ShareANEContext.context) {
-            var theRet:* = ShareANEContext.context.call("init");
-            if (theRet is ANEError) throw theRet as ANEError;
-            _isInited = theRet as Boolean;
+            var ret:* = ShareANEContext.context.call("init");
+            if (ret is ANEError) throw ret as ANEError;
         }
-        _share = this;
+        _shared = this;
     }
 
-    public static function get share():ShareANE {
-        if (_share == null) {
-            new ShareANE();
+    public static function shared():Share {
+        if (_shared == null) {
+            new Share();
         }
-        return _share;
+        return _shared;
     }
 
     public function text(text:String):void {
-        if (!safetyCheck()) return;
         ShareANEContext.context.call("shareText", text);
     }
 
     public function file(file:File, subject:String = null, text:String = null):void {
-        if (!safetyCheck()) return;
-        var theRet:* = ShareANEContext.context.call("shareFile",
+        var ret:* = ShareANEContext.context.call("shareFile",
                 file.nativePath,
                 getMimeType(file.extension),
                 subject, text);
-        if (theRet is ANEError) throw theRet as ANEError;
+        if (ret is ANEError) throw ret as ANEError;
     }
 
     private function getMimeType(extension:String):String {
@@ -97,20 +92,6 @@ public class ShareANE extends EventDispatcher {
                 return "text/plain";
         }
         return null;
-    }
-
-    /** @return whether we have inited */
-    public function get isInited():Boolean {
-        return _isInited;
-    }
-
-    /** @private */
-    private function safetyCheck():Boolean {
-        if (!_isInited || ShareANEContext.isDisposed) {
-            trace("You need to init first");
-            return false;
-        }
-        return true;
     }
 
     public static function dispose():void {

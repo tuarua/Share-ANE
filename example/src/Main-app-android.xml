@@ -7,7 +7,7 @@
     <extensions>
         <extensionID>com.tuarua.frekotlin</extensionID>
         <extensionID>com.tuarua.ShareANE</extensionID>
-        <extensionID>com.android.support.support-v4</extensionID>
+        <extensionID>androidx.legacy.legacy-support-v4</extensionID>
     </extensions>
     <initialWindow>
         <content>SWF file name is set automatically at compile time</content>
@@ -37,14 +37,13 @@
                 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 			    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
                 <application android:enabled="true">
+                    <meta-data android:name="android.max_aspect" android:value="2.1" />
+                    <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/air_share_file_paths" />
                     <provider
-                        android:name="android.support.v4.content.FileProvider"
+                        android:name="androidx.core.content.FileProvider"
                         android:authorities="air.com.tuarua.ShareANE.Example.share_provider"
                         android:exported="false"
                         android:grantUriPermissions="true">
-                        <meta-data
-                            android:name="android.support.FILE_PROVIDER_PATHS"
-                            android:resource="@xml/air_share_file_paths" />
                     </provider>
                 </application>
             </manifest>

@@ -22,7 +22,7 @@ import com.adobe.fre.FREObject
 import com.tuarua.frekotlin.*
 import java.io.File
 import java.io.IOException
-import android.support.v4.content.FileProvider
+import androidx.core.content.FileProvider
 
 @Suppress("unused", "UNUSED_PARAMETER", "UNCHECKED_CAST")
 class KotlinController : FreKotlinMainController {
@@ -32,7 +32,7 @@ class KotlinController : FreKotlinMainController {
     }
 
     fun shareText(ctx: FREContext, argv: FREArgv): FREObject? {
-        argv.takeIf { argv.size > 0 } ?: return FreArgException("shareText")
+        argv.takeIf { argv.size > 0 } ?: return FreArgException()
         val text = String(argv[0]) ?: return null
         val shareIntent = Intent()
         shareIntent.action = Intent.ACTION_SEND
@@ -44,8 +44,8 @@ class KotlinController : FreKotlinMainController {
     }
 
     fun shareFile(ctx: FREContext, argv: FREArgv): FREObject? {
-        argv.takeIf { argv.size > 3 } ?: return FreArgException("shareFile")
-        val path = String(argv[0]) ?: return FreArgException("path")
+        argv.takeIf { argv.size > 3 } ?: return FreArgException()
+        val path = String(argv[0]) ?: return FreArgException()
         if (path.isEmpty()) return FreException("Path is empty").getError()
         val mimeType = String(argv[1])
         val subject = String(argv[2])
@@ -115,7 +115,7 @@ class KotlinController : FreKotlinMainController {
         return File(externalDir, "share")
     }
 
-    override val TAG: String
+    override val TAG: String?
         get() = this::class.java.simpleName
     private var _context: FREContext? = null
     override var context: FREContext?

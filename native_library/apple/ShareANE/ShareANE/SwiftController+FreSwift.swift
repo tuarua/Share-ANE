@@ -16,7 +16,6 @@
 import Foundation
 
 extension SwiftController: FreSwiftMainController {
-    // Must have this function. It exposes the methods to our entry ObjC.
     @objc public func getFunctions(prefix: String) -> [String] {
         functionsToSet["\(prefix)init"] = initController
         functionsToSet["\(prefix)shareFile"] = shareFile
@@ -32,8 +31,6 @@ extension SwiftController: FreSwiftMainController {
     @objc public func dispose() {
     }
     
-    // Must have these 3 functions.
-    //Exposes the methods to our entry ObjC.
     @objc public func callSwiftFunction(name: String, ctx: FREContext, argc: FREArgc, argv: FREArgv) -> FREObject? {
         if let fm = functionsToSet[name] {
             return fm(ctx, argc, argv)
@@ -41,7 +38,6 @@ extension SwiftController: FreSwiftMainController {
         return nil
     }
     
-    //Here we set our FREContext
     @objc public func setFREContext(ctx: FREContext) {
         self.context = FreContextSwift.init(freContext: ctx)
         FreSwiftLogger.shared.context = context

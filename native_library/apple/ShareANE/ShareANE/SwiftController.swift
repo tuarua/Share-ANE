@@ -29,7 +29,7 @@ public class SwiftController: NSObject {
         guard argc > 0,
             let text = String(argv[0])
             else {
-                return FreArgError(message: "shareText").getError(#file, #line, #column)
+                return FreArgError().getError()
         }
         show(items: [text])
         return nil
@@ -40,7 +40,7 @@ public class SwiftController: NSObject {
             let path = String(argv[0]),
             !path.isEmpty
             else {
-                return FreArgError(message: "shareFile").getError(#file, #line, #column)
+                return FreArgError().getError()
         }
         var items: [Any] = []
         if let subject = String(argv[2]) {

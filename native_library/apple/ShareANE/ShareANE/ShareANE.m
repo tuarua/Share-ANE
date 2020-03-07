@@ -17,7 +17,7 @@
 #import "ShareANE_oc.h"
 #import <ShareANE_FW/ShareANE_FW.h>
 
-#define FRE_OBJC_BRIDGE TRSHA_FlashRuntimeExtensionsBridge // use unique prefix throughout to prevent clashes with other ANEs
+#define FRE_OBJC_BRIDGE TRSHA_FlashRuntimeExtensionsBridge
 @interface FRE_OBJC_BRIDGE : NSObject<FreSwiftBridgeProtocol>
 @end
 @implementation FRE_OBJC_BRIDGE {
@@ -26,24 +26,17 @@ FRE_OBJC_BRIDGE_FUNCS
 @end
 
 @implementation ShareANE_LIB
-SWIFT_DECL(TRSHA) // use unique prefix throughout to prevent clashes with other ANEs
+SWIFT_DECL(TRSHA)
 CONTEXT_INIT(TRSHA) {
     SWIFT_INITS(TRSHA)
-    
-    /**************************************************************************/
-    /******* MAKE SURE TO ADD FUNCTIONS HERE THE SAME AS SWIFT CONTROLLER *****/
-    /**************************************************************************/
-    
+
     static FRENamedFunction extensionFunctions[] =
     {
          MAP_FUNCTION(TRSHA, init)
         ,MAP_FUNCTION(TRSHA, shareText)
         ,MAP_FUNCTION(TRSHA, shareFile)
     };
-    
-    /**************************************************************************/
-    /**************************************************************************/
-    
+
     SET_FUNCTIONS
     
 }
