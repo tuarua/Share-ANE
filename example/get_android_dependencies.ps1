@@ -1,5 +1,5 @@
-$AneVersion = "1.3.0"
-$FreKotlinVersion = "1.9.5"
+$AneVersion = "1.4.0"
+$FreKotlinVersion = "1.10.0"
 $SupportV4Version = "1.0.0"
 
 $currentDir = (Get-Item -Path ".\" -Verbose).FullName
