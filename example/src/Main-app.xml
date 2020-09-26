@@ -5,7 +5,9 @@
     <name>ShareANEExample</name>
     <versionNumber>1.5.0</versionNumber>
     <extensions>
+        <extensionID>com.tuarua.frekotlin</extensionID>
         <extensionID>com.tuarua.ShareANE</extensionID>
+        <extensionID>androidx.legacy.legacy-support-v4</extensionID>
     </extensions>
     <initialWindow>
         <content>SWF file name is set automatically at compile time</content>
@@ -24,8 +26,31 @@
         <image167x167>icon167.png</image167x167>
         <image180x180>icon180.png</image180x180>
     </icon>
-    
-    <!-- iOS specific capabilities -->
+
+    <!-- Specify Android specific tags that get passed to AndroidManifest.xml file. -->
+    <android>
+        <manifestAdditions>
+            <![CDATA[
+            <manifest android:installLocation="auto">
+            <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="28" />
+                <uses-permission android:name="android.permission.INTERNET"/>
+                <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+			    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+                <application android:enabled="true">
+                    <meta-data android:name="android.max_aspect" android:value="2.1" />
+                    <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/air_share_file_paths" />
+                    <provider
+                        android:name="androidx.core.content.FileProvider"
+                        android:authorities="air.com.tuarua.ShareANE.Example.share_provider"
+                        android:exported="false"
+                        android:grantUriPermissions="true">
+                    </provider>
+                </application>
+            </manifest>
+            ]]>
+        </manifestAdditions>
+
+    </android>
     <iPhone>
         <!-- A list of plist key/value pairs to be added to the application Info.plist -->
         <InfoAdditions>
@@ -41,7 +66,7 @@
                 <string>9.0</string>
             ]]>
         </InfoAdditions>
-        
+
         <!-- Display Resolution for the app (either "standard" or "high"). Optional. Default "standard" -->
         <requestedDisplayResolution>high</requestedDisplayResolution>
     </iPhone>

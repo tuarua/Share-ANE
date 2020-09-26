@@ -1,0 +1,13 @@
+{
+  "name": "com.tuarua.ShareANE",
+  "version": "1.5.0",
+  "repository": {
+    "url": "https://tuarua.github.io/air/air_packages.json"
+  },
+  "dependencies": {
+    "com.tuarua.frekotlin": "1.40.0",
+    "androidx.legacy.legacy-support-v4": "1.0.0",
+    "com.tuarua.iOS.FreSwift": "4.5.0",
+    "com.tuarua.ShareANE.IosDependencies": "1.5.0"
+  }
+}
