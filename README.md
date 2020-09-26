@@ -4,66 +4,46 @@ Share text or files with this Adobe Air Native Extension for iOS 9.0+ and Androi
 
 -------------
 
-## Android
+## Prerequisites
 
-#### The ANE + Dependencies
+You will need:
 
-cd into /example and run:
-- macOS (Terminal)
-```shell
-bash get_android_dependencies.sh
-```
-- Windows Powershell
-```shell
-get_android_dependencies.ps1
-```
+- IntelliJ IDEA
+- AIR 33.1.1.217+
+- Xcode 11.6
+- [.Net Core Runtime](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [AIR-Tools](https://github.com/tuarua/AIR-Tools/)
 
-```xml
-<extensions>
-<extensionID>com.tuarua.frekotlin</extensionID>
-<extensionID>androidx.legacy.legacy-support-v4</extensionID>
-<extensionID>com.tuarua.ShareANE</extensionID>
-...
-</extensions>
+### The ANE + Dependencies
+
+Change directory into the _example_ folder eg
+
+```bash
+cd /MyMac/dev/AIR/Share-ANE/example
 ```
 
-You will also need to include the following in your app manifest. Update accordingly.
+Run the _"air-tools"_ command (You will need [AIR-Tools](https://github.com/tuarua/AIR-Tools/) installed)
 
-```xml
-<provider
-    android:name="androidx.core.content.FileProvider"
-    android:authorities="air.[your.app.id].share_provider"
-    android:exported="false"
-    android:grantUriPermissions="true">
-    <meta-data android:name="android.support.FILE_PROVIDER_PATHS" 
-    android:resource="@xml/air_share_file_paths" />
-</provider>
+```bash
+air-tools install
 ```
+
+
+**NEW** This tool now: 
+
+1. Downloads the ANE and dependencies.
+1. Applies all required Android Manifest, InfoAdditons and Entitlements to your app.xml. See air package.json
+
 
 -------------
 
 ## iOS
 
-#### The ANE + Dependencies
+>N.B. You must use a Mac to build an iOS app using this ANE. Windows is **NOT** supported.
 
-N.B. You must use a Mac to build an iOS app using this ANE. Windows is NOT supported.
+#### iOS: Packaging Frameworks Dependencies
 
-From the command line cd into /example and run:
+The iOS ANEs are written in Swift. We need to package the Swift libraries (along with a couple of dynamic frameworks) with our AIR app
 
-```shell
-bash get_ios_dependencies.sh
-```
+![https://raw.githubusercontent.com/wiki/tuarua/Firebase-ANE/images/frameworks-package.png](https://raw.githubusercontent.com/wiki/tuarua/Firebase-ANE/images/frameworks-package.png)
 
-This folder, ios_dependencies/device/Frameworks, must be packaged as part of your app when creating the ipa. How this is done will depend on the IDE you are using.
-After the ipa is created unzip it and confirm there is a "Frameworks" folder in the root of the .app package.   
-
-### Prerequisites
-
-You will need:
-
-- IntelliJ IDEA
-- Android Studio 3 if you wish to edit the Android source
-- AIR 33.0.2.338+
-- Xcode 11.3
-- wget on macOS via `brew install wget`
-- Powershell on Windows
