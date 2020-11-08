@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ShareANE.iml" filepath="$PROJECT_DIR$/ShareANE.iml" group="ShareANE" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="ShareANE/app" />
+      <module fileurl="file://$PROJECT_DIR$/ShareANE.iml" filepath="$PROJECT_DIR$/ShareANE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ShareANE.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ShareANE.app.iml" />
     </modules>
   </component>
 </project>

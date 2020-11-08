@@ -3,7 +3,7 @@
     <id>com.tuarua.ShareANE.Example</id>
     <filename>Main</filename>
     <name>ShareANEExample</name>
-    <versionNumber>1.5.0</versionNumber>
+    <versionNumber>1.6.0</versionNumber>
     <extensions>
         <extensionID>com.tuarua.frekotlin</extensionID>
         <extensionID>com.tuarua.ShareANE</extensionID>
@@ -32,7 +32,7 @@
         <manifestAdditions>
             <![CDATA[
             <manifest android:installLocation="auto">
-            <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="28" />
+            <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="29" />
                 <uses-permission android:name="android.permission.INTERNET"/>
                 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 			    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
