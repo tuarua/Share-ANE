@@ -1,75 +1,63 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <application xmlns="http://ns.adobe.com/air/application/33.1">
-    <id>com.tuarua.ShareANE.Example</id>
-    <filename>Main</filename>
-    <name>ShareANEExample</name>
-    <versionNumber>1.6.0</versionNumber>
-    <extensions>
-        <extensionID>com.tuarua.frekotlin</extensionID>
-        <extensionID>com.tuarua.ShareANE</extensionID>
-        <extensionID>androidx.legacy.legacy-support-v4</extensionID>
-    </extensions>
-    <initialWindow>
-        <content>SWF file name is set automatically at compile time</content>
-        <visible>true</visible>
-        <aspectRatio>portrait</aspectRatio>
-        <autoOrients>false</autoOrients>
-        <fullScreen>true</fullScreen>
-        <renderMode>direct</renderMode>
-        <depthAndStencil>true</depthAndStencil>
-    </initialWindow>
-    
-    <icon>
-        <image76x76>icon76.png</image76x76>
-        <image120x120>icon120.png</image120x120>
-        <image152x152>icon152.png</image152x152>
-        <image167x167>icon167.png</image167x167>
-        <image180x180>icon180.png</image180x180>
-    </icon>
-
-    <!-- Specify Android specific tags that get passed to AndroidManifest.xml file. -->
-    <android>
-        <manifestAdditions>
-            <![CDATA[
-            <manifest android:installLocation="auto">
-            <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="29" />
-                <uses-permission android:name="android.permission.INTERNET"/>
-                <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-			    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-                <application android:enabled="true">
-                    <meta-data android:name="android.max_aspect" android:value="2.1" />
-                    <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/air_share_file_paths" />
-                    <provider
-                        android:name="androidx.core.content.FileProvider"
-                        android:authorities="air.com.tuarua.ShareANE.Example.share_provider"
-                        android:exported="false"
-                        android:grantUriPermissions="true">
-                    </provider>
-                </application>
-            </manifest>
-            ]]>
-        </manifestAdditions>
-
-    </android>
-    <iPhone>
-        <!-- A list of plist key/value pairs to be added to the application Info.plist -->
-        <InfoAdditions>
-            <![CDATA[
-                <key>UIDeviceFamily</key>
-                <array>
-                <!-- iPhone and iPod touch devices -->
-                <string>1</string>
-                <!-- iPad devices -->
-                <string>2</string>
-                </array>
-                <key>MinimumOSVersion</key>
-                <string>9.0</string>
-            ]]>
-        </InfoAdditions>
-
-        <!-- Display Resolution for the app (either "standard" or "high"). Optional. Default "standard" -->
-        <requestedDisplayResolution>high</requestedDisplayResolution>
-    </iPhone>
-    
-    
+  <id>com.tuarua.ShareANE.Example</id>
+  <filename>Main</filename>
+  <name>ShareANEExample</name>
+  <versionNumber>1.7.0</versionNumber>
+  <extensions>
+    <extensionID>com.tuarua.ShareANE</extensionID>
+    <extensionID>com.tuarua.frekotlin</extensionID>
+    <extensionID>androidx.legacy.legacy-support-v4</extensionID>
+  </extensions>
+  <initialWindow>
+    <content>SWF file name is set automatically at compile time</content>
+    <visible>true</visible>
+    <aspectRatio>portrait</aspectRatio>
+    <autoOrients>false</autoOrients>
+    <fullScreen>true</fullScreen>
+    <renderMode>direct</renderMode>
+    <depthAndStencil>true</depthAndStencil>
+  </initialWindow>
+  <icon>
+    <image76x76>icon76.png</image76x76>
+    <image120x120>icon120.png</image120x120>
+    <image152x152>icon152.png</image152x152>
+    <image167x167>icon167.png</image167x167>
+    <image180x180>icon180.png</image180x180>
+  </icon>
+  <!-- Specify Android specific tags that get passed to AndroidManifest.xml file. -->
+  <android>
+    <manifestAdditions><![CDATA[<manifest android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="29" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<application android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:enabled="true">
+		<meta-data android:name="android.max_aspect" android:value="2.1" />
+		<activity android:excludeFromRecents="false" android:hardwareAccelerated="true">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/air_share_file_paths" />
+		<provider android:name="androidx.core.content.FileProvider" android:authorities="air.com.tuarua.ShareANE.Example.share_provider" android:exported="false" android:grantUriPermissions="true"></provider>
+	</application>
+</manifest>]]></manifestAdditions>
+  </android>
+  <iPhone>
+    <!-- A list of plist key/value pairs to be added to the application Info.plist -->
+    <InfoAdditions><![CDATA[
+	<key>MinimumOSVersion</key>
+	<string>9.0</string>
+	<key>UIDeviceFamily</key>
+	<array>
+		<string>1</string>
+		<string>2</string>
+	</array>
+]]></InfoAdditions>
+    <!-- Display Resolution for the app (either "standard" or "high"). Optional. Default "standard" -->
+    <requestedDisplayResolution>high</requestedDisplayResolution>
+  </iPhone>
 </application>

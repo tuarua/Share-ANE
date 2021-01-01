@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="Flex" version="4">
-  <component name="FlexBuildConfigurationManager" active="Android-Device">
+  <component name="FlexBuildConfigurationManager" active="iOS-Device">
     <configurations>
       <configuration name="iOS-Device" target-platform="Mobile" pure-as="true" main-class="Main" output-file="ShareExample.swf" output-folder="$MODULE_DIR$/bin-release/device">
         <dependencies target-player="28.0">
@@ -12,7 +12,7 @@
               <dependency linkage="Merged" />
             </entry>
           </entries>
-          <sdk name="AIRSDK_33.1.1.300" />
+          <sdk name="AIRSDK_33.1.1.345" />
         </dependencies>
         <compiler-options />
         <packaging-air-desktop />
@@ -24,7 +24,7 @@
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/system" path-in-package="." />
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/src/dog.jpg" path-in-package="dog.jpg" />
           </files-to-package>
-          <AirSigningOptions keystore-path="$USER_HOME$/Documents/appleCertsProv/2020/dev/tua_rua_dev_2020.p12" provisioning-profile-path="$USER_HOME$/Documents/appleCertsProv/2020/dev/Tua_Rua_Dev_Provisioning.mobileprovision" />
+          <AirSigningOptions keystore-path="$USER_HOME$/Documents/appleCertsProv/2021/iOS/dev/tua_rua_dev_2021.p12" provisioning-profile-path="$USER_HOME$/Documents/appleCertsProv/2021/iOS/dev/Tua_Rua_Dev_Provisioning.mobileprovision" />
         </packaging-ios>
       </configuration>
       <configuration name="iOS-Simulator" target-platform="Mobile" pure-as="true" main-class="Main" output-file="iOS-Simulator.swf" output-folder="$MODULE_DIR$/bin-release/simulator">
@@ -37,7 +37,7 @@
               <dependency linkage="Merged" />
             </entry>
           </entries>
-          <sdk name="AIRSDK_33.1.1.300" />
+          <sdk name="AIRSDK_33.1.1.345" />
         </dependencies>
         <compiler-options />
         <packaging-air-desktop />
@@ -49,7 +49,7 @@
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/system" path-in-package="." />
             <FilePathAndPathInPackage file-path="$MODULE_DIR$/src/dog.jpg" path-in-package="dog.jpg" />
           </files-to-package>
-          <AirSigningOptions keystore-path="$USER_HOME$/Documents/appleCertsProv/2020/dev/tua_rua_dev_2020.p12" provisioning-profile-path="$USER_HOME$/Documents/appleCertsProv/2020/dev/Tua_Rua_Dev_Provisioning.mobileprovision" />
+          <AirSigningOptions keystore-path="$USER_HOME$/Documents/appleCertsProv/2021/iOS/dev/tua_rua_dev_2021.p12" provisioning-profile-path="$USER_HOME$/Documents/appleCertsProv/2021/iOS/dev/Tua_Rua_Dev_Provisioning.mobileprovision" />
         </packaging-ios>
       </configuration>
       <configuration name="Android-Device" target-platform="Mobile" pure-as="true" main-class="Main" output-file="Android-Device.swf" output-folder="$MODULE_DIR$/bin-release/device">
@@ -62,7 +62,7 @@
               <dependency linkage="Merged" />
             </entry>
           </entries>
-          <sdk name="AIRSDK_33.1.1.300" />
+          <sdk name="AIRSDK_33.1.1.345" />
         </dependencies>
         <compiler-options>
           <option name="additionalOptions" value="-swf-version=44" />
@@ -91,11 +91,10 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="AIRSDK_33.1.1.300" jdkType="Flex SDK Type (new)" />
+    <orderEntry type="jdk" jdkName="AIRSDK_33.1.1.345" jdkType="Flex SDK Type (new)" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="ShareANE" level="project" />
     <orderEntry type="library" exported="" name="FiraSansSemiBold" level="project" />
-    <orderEntry type="library" exported="" name="starling" level="project" />
     <orderEntry type="library" exported="" name="com.android.support.support-v4-27.1.0" level="project" />
     <orderEntry type="library" exported="" name="com.tuarua.frekotlin" level="project" />
     <orderEntry type="library" exported="" name="com.tuarua.frekotlin-1.8.0" level="project" />
@@ -104,6 +103,7 @@
     <orderEntry type="library" exported="" name="com.tuarua.frekotlin-1.9.5" level="project" />
     <orderEntry type="library" exported="" name="com.tuarua.frekotlin-1.10.0" level="project" />
     <orderEntry type="library" exported="" name="android_dependencies" level="project" />
+    <orderEntry type="library" exported="" name="starling" level="project" />
     <orderEntry type="library" exported="" name="extensions" level="project" />
   </component>
 </module>
